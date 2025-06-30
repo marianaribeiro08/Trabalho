@@ -12,7 +12,8 @@ export class CreateTableUsers1750979565250 implements MigrationInterface {
             {name: 'phone', type:'varchar', isNullable:false, isUnique:true},
             {name: 'password', type:'varchar', isNullable:false}, 
             {name: 'created_at', type: 'datetime', default:"'CURRENT_TIMESTAMP'"}
-        ]
+        ],
+        
     }))    
     }
 
