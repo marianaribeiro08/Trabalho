@@ -15,5 +15,5 @@ export const userSchema = createUserSchema.extend({
 });
 
 // Tipos inferidos para usar nos usecases
-export type CreateUserInput = z.infer<typeof createUserSchema>;
-export type UserOutput = z.infer<typeof userSchema>;
+export type CreateUserInput = z.infer<typeof createUserSchema>
+export type UserOutput = z.infer<typeof userSchema>

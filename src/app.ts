@@ -1,5 +1,6 @@
 import Fastify from 'fastify'
 import { AppDataSource } from './data-source'
+import { usersRoutes } from './routes/users.Routes' 
 
 export async function startApp(){
     const app = Fastify()
@@ -11,8 +12,15 @@ export async function startApp(){
         console.log('Erro de conexao do banco de dados', ex)
         process.exit(1)
     })
-
+    app.register(usersRoutes)
     return app
 
 
 }
+
+
+
+
+
+
+

@@ -11,5 +11,7 @@ database:'./src/db/social.db',
 synchronize: false,
 logging: false,
 entities: [User, Post, Comment],
-migrations: ['.src/typeorm/migrations/*.ts']
+migrations: ['src/typeorm/migrations/*.ts']
 })
+
+//C:\www\social-duque\src\data-source.ts

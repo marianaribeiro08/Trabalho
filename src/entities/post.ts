@@ -8,13 +8,13 @@ export class Post {
   @PrimaryColumn('uuid')
   id: string = uuidv4()
 
-@Column()
+@Column({type:'text'})
   content!: string
 
 @CreateDateColumn()
   created_at!: Date
 
-@ManyToOne(() => User, user => user.post)
+@ManyToOne(() => User, user => user.posts)
   user!: User
 
 @OneToMany(() => Comment, comment => comment.post)

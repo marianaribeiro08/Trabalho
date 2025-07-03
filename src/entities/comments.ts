@@ -8,7 +8,7 @@ export class Comment {
   @PrimaryColumn('uuid')
   id: string = uuidv4()
 
-  @Column()
+  @Column({type:'text'})
   content!: string
 
   @CreateDateColumn()
