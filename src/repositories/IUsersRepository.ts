@@ -7,4 +7,5 @@ export interface IUsersRepository {
   findByPhone(phone: string): Promise<User | null>;
   update(id: string, data: Partial<User>): Promise<User>;
   delete(id: string): Promise<void>;
+  findAll():Promise<User[]>
 }

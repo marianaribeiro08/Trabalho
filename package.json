@@ -12,6 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^2.2.2",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "@types/swagger-ui-express": "^4.1.8",
     "eslint": "^9.29.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
@@ -23,6 +25,8 @@
     "fastify": "^5.4.0",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "typeorm": "^0.3.25",
     "uuid": "^11.1.0",
     "uuidv4": "^6.2.13",

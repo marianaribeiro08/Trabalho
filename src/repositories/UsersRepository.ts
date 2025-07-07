@@ -5,6 +5,11 @@ import { IUsersRepository } from './IUsersRepository';
 export class UsersRepository implements IUsersRepository {
   private repository = AppDataSource.getRepository(User);
 
+  async findAll(): Promise<User[]> {
+    return await this.repository.find()
+  }
+  
+
   async create(user: User): Promise<User> {
     const newUser = this.repository.create(user);
     return await this.repository.save(newUser);

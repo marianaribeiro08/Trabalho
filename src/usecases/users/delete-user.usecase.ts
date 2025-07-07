@@ -1,9 +1,11 @@
-import { UsersRepository } from "../../repositories/UsersRepository";
+import { IUsersRepository } from "../../repositories/IUsersRepository" 
 
-const userRepo = new UsersRepository()
 export class DeleteUserUseCase {
-  execute(id: string) {
-    throw new Error('Method not implemented.');
+  constructor(private usersRepository: IUsersRepository) {}
+
+  async execute(id: string): Promise<void> {
+    const user = await this.usersRepository.findById(id)
+    if (!user) throw new Error('Usuário não encontrado')
+    await this.usersRepository.delete(id)
   }
-    // ...
-  }
+}
